@@ -1,6 +1,7 @@
 <template>
   <div>
     <HelloWorld msg="Welcome to Vue.js App"></HelloWorld>
+    <TodoList></TodoList>
     <div v-if="isShowing">
       <div v-show="isShow" v-html="title"></div>
       <h3 v-show="isShow === null">Vuejs Tutorial</h3>
@@ -18,11 +19,13 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import TodoList from './components/TodoList'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    TodoList
   },
   data(){
     return {
@@ -52,8 +55,9 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  text-align: left;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: auto;
+  width: 200px;
 }
 </style>
